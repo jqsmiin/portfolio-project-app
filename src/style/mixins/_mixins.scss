@@ -1,0 +1,19 @@
+@mixin after-effect {
+  content: "";
+  background-image: url("../photos/ring.png");
+  position: absolute;
+  width: 415px;
+  height: 243px;
+  z-index: 1000000;
+}
+@mixin button-style {
+  border: 1px solid #fff !important;
+  padding: 8px 28px;
+  font-weight: 700 !important;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    transition: 0.3s;
+    border: 1px solid #fff !important;
+  }
+}

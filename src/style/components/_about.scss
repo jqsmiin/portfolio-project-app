@@ -1,0 +1,39 @@
+#about {
+  .item-1 {
+    p {
+      font-size: 19px;
+      font-family: "Montserrat";
+      margin-top: 1.5rem;
+      line-height: 1.8;
+      font-weight: 500;
+      color: #ccc;
+    }
+    .icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .icon-1 {
+      color: $icons-color;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        transition: 0.3s;
+      }
+    }
+    .icon-2 {
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: $icons-color;
+        transition: 0.3s;
+      }
+    }
+  }
+  .item-3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}

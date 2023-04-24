@@ -1,0 +1,35 @@
+#navbar {
+  color: #ffff;
+  width: 100%;
+  position: fixed;
+  top: -10px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #0e0e0e;
+  padding: 1rem 0rem;
+  .logo {
+    width: 90px;
+  }
+  .navbar-collapse {
+    justify-content: center;
+    .navbar-nav {
+      gap: 1rem;
+      .nav-link {
+        font-size: 17px;
+        color: #fff;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        &:hover {
+          color: $primary-color;
+          transition: 0.3s;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+.scroll-nav {
+  z-index: 2343434343232323 !important;
+  box-shadow: 2px 2px 7px #000 !important;
+}
