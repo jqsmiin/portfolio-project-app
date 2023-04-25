@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line, Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import { useState, useEffect } from "react";
 
 ChartJS.register(
@@ -23,24 +23,19 @@ ChartJS.register(
 
 function Chart() {
   const [repos, setRepos] = useState(null);
-  const dataset1 = repos.map((val) => {
-    const year = val.value.split("/")[2];
-    console.log(year, 123);
-  });
-
-  console.log(dataset1);
+  const [data1, setData1] = useState([]);
+  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch("https://api.github.com/user/repos", {
         headers: {
-          Authorization: "Bearer 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",
+          Authorization:
+            "Bearer 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",
         },
       });
 
       const res = await data.json();
-
-      console.log(res);
 
       const newData = res.map((repo) => {
         return {
@@ -48,6 +43,17 @@ function Chart() {
           value: new Date(repo.created_at).toLocaleDateString(),
         };
       });
+
+      newData.map((data) => {
+        const year = data.value && data.value.split("/")[2];
+        if (year === "2022") {
+          setData1((prevData) => prevData.concat(data));
+        } else if (year === "2023") {
+          setData2((prevData) => prevData.concat(data));
+        }
+      });
+      // Map trough new data, take a year, set a condition
+
       setRepos(newData);
     };
 
@@ -55,28 +61,23 @@ function Chart() {
   }, []);
 
   const dates = repos && repos.map((repo) => repo.value);
+  const dates1 = data1 && data1.map((repo) => repo.value);
+  const dates2 = data2 && data2.map((repo) => repo.value);
   const data = {
-    labels: dates && dates,
+    labels: repos && repos.map((repo) => repo.label),
     datasets: [
       {
-        label: "2021",
-        data: dates && dates.map((date) => new Date(date).getTime()),
-        fill: false,
-        borderColor: "rgba(234, 78, 53,1)",
-        tension: 0.1,
-      },
-      {
         label: "2022",
-        data: dates && dates.map((date) => new Date(date).getTime()),
+        data: dates1 && dates1.map((date) => new Date(date).getTime()),
         fill: false,
         borderColor: "rgba(234, 78, 53,1)",
         tension: 0.1,
       },
       {
         label: "2023",
-        data: dates && dates.map((date) => new Date(date).getTime()),
+        data: dates2 && dates2.map((date) => new Date(date).getTime()),
         fill: false,
-        borderColor: "rgba(234, 78, 53,1)",
+        borderColor: "rgba(53, 234, 202, 1)",
         tension: 0.1,
       },
     ],
@@ -84,14 +85,11 @@ function Chart() {
 
   const options = {
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            min: 0,
-            max: 100,
-          },
+      y: {
+        ticks: {
+          reverse: true,
         },
-      ],
+      },
     },
   };
 

@@ -1,78 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { useEffect, useState } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import BallCanvas from "./assets/Ball";
-import html from "../photos/tech/html.png";
-import css from "../photos/tech/css.png";
-import docker from "../photos/tech/docker.png";
-import git from "../photos/tech/git.png";
-import javascript from "../photos/tech/javascript.png";
-import mongodb from "../photos/tech/mongodb.png";
-import nodejs from "../photos/tech/nodejs.png";
-import reactjs from "../photos/tech/reactjs.png";
-import redux from "../photos/tech/redux.png";
-import tailwind from "../photos/tech/tailwind.png";
-import typescript from "../photos/tech/typescript.png";
-import threejs from "../photos/tech/threejs.svg";
-import figma from "../photos/tech/figma.png";
+import { technologies } from "./utils/Data";
 import Chart from "./utils/Chart";
 
 function About() {
-  const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-
   return (
     <section id="about" className="mb-6">
       <Container>

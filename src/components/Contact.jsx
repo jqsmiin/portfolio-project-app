@@ -1,10 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PageTitle from "./utils/PageTitle";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { Mail } from "./assets/Mail";
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useEffect } from "react";
-import { Environment, OrbitControls } from "@react-three/drei";
 
 function Contact() {
   return (
@@ -48,16 +44,6 @@ function Contact() {
             </ul>
             <p></p>
           </div>
-          {/* <div className="icons">
-            <Canvas camera={{ fov: 8 }}>
-              <ambientLight intensity={1.25} />
-              <Suspense fallback={null}>
-                <Mail />
-              </Suspense>
-              <Environment preset="sunset" />
-              <OrbitControls enableZoom={false} />
-            </Canvas>
-          </div> */}
         </div>
       </div>
       <Container>
