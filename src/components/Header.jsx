@@ -28,7 +28,14 @@ function Header() {
     <section id="header" className="mb-6">
       <Container>
         <Row>
-          <Col md={6} className="item-1">
+          <Col
+            md={12}
+            lg={6}
+            className="item-1"
+            data-aos="fade-in"
+            data-aos-easing="linear"
+            data-aos-duration="1100"
+          >
             <div className="text-container">
               <h1>
                 Hi I'm Jasmin. <span ref={titleRef}></span>{" "}
@@ -51,7 +58,7 @@ function Header() {
               </a>
             </div>
           </Col>
-          <Col md={6} className="canvas-container">
+          <Col md={12} lg={6} className="canvas-container item-2">
             <Canvas camera={{ fov: 8 }}>
               <ambientLight intensity={1.25} />
               <Suspense fallback={null}>

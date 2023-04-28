@@ -13,9 +13,9 @@ import typescript from "../../photos/tech/typescript.png";
 import threejs from "../../photos/tech/threejs.svg";
 import figma from "../../photos/tech/figma.png";
 // Projects
-import project1 from "../../photos/project1.png";
-import project2 from "../../photos/project2.png";
-import project3 from "../../photos/project3.png";
+import project1 from "../../photos/elite.png";
+import project2 from "../../photos/delivery.png";
+import project3 from "../../photos/appco.png";
 import circle from "../../photos/circle.png";
 // Education
 import { VscSymbolStructure } from "react-icons/vsc";
@@ -81,6 +81,7 @@ export const projectsInfo = [
   {
     id: 1,
     link: "https://startling-entremet-a3f819.netlify.app",
+    gitLink: "https://github.com/jqsmiin/real-estate-project",
     title: "Elite Homes",
     subtitle: "Real Estate Project | MERN MUI",
     paragraph:
@@ -91,6 +92,7 @@ export const projectsInfo = [
   {
     id: 2,
     link: "https://rich-jade-crow-slip.cyclic.app",
+    gitLink: "https://github.com/jqsmiin/food-order-app",
     title: "Delivery",
     subtitle: "Food Order Project | MERN",
     paragraph:
@@ -101,6 +103,7 @@ export const projectsInfo = [
   {
     id: 3,
     link: "https://appco-landing.vercel.app",
+    gitLink: "https://github.com/jqsmiin/appco-landing",
     title: "Appco Landing",
     subtitle: "Landing Page Project | React Next.js",
     paragraph:
@@ -118,7 +121,7 @@ export const educationData = [
     paragraph:
       "I learned about react and some backend technologies like firebase, mongodb etc. It was very helpful and polished my skills.",
     year: "Aug. 6 - 2022",
-    link: "",
+    link: "https://www.udemy.com/certificate/UC-5f44438a-8299-4886-a696-c0f6df6b88b7/",
   },
   {
     id: 2,
@@ -127,14 +130,14 @@ export const educationData = [
     paragraph:
       "I learned about Node, MongoDB, Express and other backend technologies.",
     year: "Oct. 4 - 2022",
-    link: "",
+    link: "https://www.udemy.com/certificate/UC-c3dae912-6c00-443d-9980-32d15e437257/",
   },
   {
     id: 3,
     icon: <VscSymbolStructure />,
     title: "JavaScript Data Structures & Algorithms",
     paragraph:
-      "I learned about a variety of data structures, including arrays, linked lists, stacks, queues, trees, heaps, and graphs. Additionally, I learned about a range of algorithms for sorting and searching",
+      "I learned about a variety of data structures, including arrays, linked lists, stacks, queues, trees, heaps, and graphs. Additionally, I learned about a range of algorithms for sorting and searching.",
     year: "May. 5 - 2023",
     link: "",
   },

@@ -13,7 +13,7 @@ function About() {
           <div className="page-bottom-line"></div>
         </div>
         <Row>
-          <Col md={6} className="item-1">
+          <Col md={12} lg={6} className="item-1">
             <p>
               {" "}
               I'm a web developer with experience working with the MERN stack. I
@@ -25,18 +25,31 @@ function About() {
               development.
             </p>
             <div className="icons">
-              <h3 className="icon-1">
+              <a
+                className="icon-1"
+                href="https://github.com/jqsmiin"
+                target="_blank"
+              >
                 <AiFillGithub />
-              </h3>
-              <h3 className="icon-2">
+              </a>
+              <a
+                className="icon-2"
+                href="https://www.linkedin.com/in/jasmin-oru%C4%8D-287774261/"
+                target="_blank"
+              >
                 <AiFillLinkedin />
-              </h3>
+              </a>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={12} lg={6} className="item-2">
             <Chart />
           </Col>
-          <Col md={12} className="item-3">
+          <Col
+            md={12}
+            className="item-3"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+          >
             {technologies.map((technology) => (
               <BallCanvas icon={technology.icon} key={technology.name} />
             ))}

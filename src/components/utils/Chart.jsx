@@ -31,18 +31,19 @@ function Chart() {
       const data = await fetch("https://api.github.com/user/repos", {
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
         },
       });
 
       const res = await data.json();
-
-      const newData = res.map((repo) => {
-        return {
-          label: repo.name,
-          value: new Date(repo.created_at).toLocaleDateString(),
-        };
-      });
+      const newData =
+        res &&
+        res.map((repo) => {
+          return {
+            label: repo.name,
+            value: new Date(repo.created_at).toLocaleDateString(),
+          };
+        });
 
       newData.map((data) => {
         const year = data.value && data.value.split("/")[2];

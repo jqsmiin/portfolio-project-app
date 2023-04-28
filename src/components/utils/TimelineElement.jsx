@@ -22,7 +22,9 @@ function TimelineElement() {
         >
           <h3 className="vertical-timeline-element-title">{item.title}</h3>
           <p>{item.paragraph}</p>
-          <a className="timeline-btn">See More</a>
+          <a className="timeline-btn" href={item.link} target="_blank">
+            See More
+          </a>
         </VerticalTimelineElement>
       ))}
     </>

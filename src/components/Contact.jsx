@@ -1,8 +1,56 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PageTitle from "./utils/PageTitle";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const [mail, setMail] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = (e) => {
+    setMail((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_jnha8ag",
+        "template_9gmwxgj",
+        {
+          from_name: mail.name,
+          to_name: "Laxy",
+          form_email: mail.email,
+          to_email: "laxyking142@gmail.com",
+          message: mail.message,
+        },
+        "7txJSBtBeeePc4cB_"
+      )
+      .then(
+        () => {
+          alert("Thank you. I will get back to you as soon as possible");
+          setMail({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error);
+
+          alert("Something went wrong.");
+        }
+      );
+  };
+
   return (
     <section id="contact">
       <svg
@@ -26,7 +74,7 @@ function Contact() {
             </p>
             <ul>
               <li>
-                <a href="" target="_blank">
+                <a href="mailto:jasmin.oruc23@gmail.com" target="_blank">
                   <span>
                     <AiOutlineMail />
                   </span>{" "}
@@ -34,7 +82,7 @@ function Contact() {
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="https://github.com/jqsmiin" target="_blank">
                   <span>
                     <AiFillGithub />
                   </span>{" "}
@@ -46,18 +94,42 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1100">
         <PageTitle title={"Get In Touch"} />
         <Row>
           <Col md={12}>
             <div className="input-container">
-              <div className="input-group">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-              </div>
-              <div className="input-group">
-                <textarea placeholder="Your message"></textarea>
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="input-group">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={mail.name}
+                    name="name"
+                    onChange={onChange}
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={mail.email}
+                    name="email"
+                    onChange={onChange}
+                  />
+                </div>
+                <div className="input-group">
+                  <textarea
+                    placeholder="Your message"
+                    value={mail.message}
+                    name="message"
+                    onChange={onChange}
+                  ></textarea>
+                  <div className="button-container">
+                    <button type="submit" className="primary-btn">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </Col>
         </Row>

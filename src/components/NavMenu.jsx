@@ -1,6 +1,7 @@
 import { Col, Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../photos/logo2.png";
 import { useEffect, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function NavMenu() {
   const [scroll, setScroll] = useState(false);
@@ -24,9 +25,11 @@ function NavMenu() {
         <Navbar.Brand href="#">
           <img className="logo" src={logo} alt="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll">
+          <GiHamburgerMenu />
+        </Navbar.Toggle>
         <Navbar.Collapse id="navbarScroll">
-          <Col md={10} className="justify-content-center d-flex">
+          <Col md={10} className="justify-content-center d-flex item-1">
             <Nav
               className="my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
@@ -38,7 +41,7 @@ function NavMenu() {
               <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
           </Col>
-          <Col md={2} className="justify-content-center d-flex">
+          <Col md={2} className="justify-content-center d-flex item-2">
             <a href="#contact" className="primary-btn">
               Let's Talk
             </a>

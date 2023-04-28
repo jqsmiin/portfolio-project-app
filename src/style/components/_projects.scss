@@ -1,16 +1,18 @@
 #projects {
+  margin: 4rem 1rem;
+  overflow: hidden;
   a {
     color: #fff;
     text-decoration: none;
   }
   .item-1 {
-    background-color: #d56654 !important;
+    background-color: #5a7eaf !important;
   }
   .item-2 {
-    background-color: #879aeb !important;
+    background-color: #9b7b25 !important;
   }
   .item-3 {
-    background-color: #9b7b25 !important;
+    background-color: #879aeb !important;
   }
   .item {
     background-color: #ccc;
@@ -59,29 +61,36 @@
       }
     }
     .wrapper {
-      margin-top: 3rem;
+      margin-top: -3rem;
       p {
         font-size: 21px;
       }
       .wrapper-item-1 {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 1rem;
         p {
           line-height: 1.9;
         }
       }
       .wrapper-item-2 {
-        margin-top: -3rem;
+        margin-top: 0rem;
+        position: relative;
         .background-image {
-          position: relative;
+          padding-bottom: 0rem;
+          margin-top: 1.5rem;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
-          .project {
-            position: absolute;
-            width: 278px;
-            margin-top: -1rem;
+          flex-direction: column;
+          position: relative;
+          img {
+            &:nth-child(2) {
+              position: absolute;
+              width: 130%;
+              bottom: 33px;
+            }
           }
         }
       }
