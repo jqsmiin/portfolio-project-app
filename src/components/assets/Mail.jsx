@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Mail(props) {
-  const { nodes, materials } = useGLTF("../../public/models/mail.glb");
+  const { nodes, materials } = useGLTF("/models/mail.glb");
   return (
     <group {...props} scale={[0.07, 0.07, 0.07]} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -28,4 +28,4 @@ export function Mail(props) {
   );
 }
 
-useGLTF.preload("../../public/models/mail.glb");
+useGLTF.preload("/models/mail.glb");

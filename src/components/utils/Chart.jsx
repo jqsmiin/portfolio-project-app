@@ -30,8 +30,9 @@ function Chart() {
     const fetchData = async () => {
       const data = await fetch("https://api.github.com/user/repos", {
         headers: {
-          Authorization:
-            "Bearer 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",
+          Authorization: `Bearer ${
+            import.meta.env.VITE_REACT_APP_GITHUB_TOKEN
+          }`,
         },
       });
 

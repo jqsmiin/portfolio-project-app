@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Game(props) {
-  const { nodes, materials } = useGLTF("../../public/models/game.glb");
+  const { nodes, materials } = useGLTF("/models/game.glb");
   return (
     <group {...props} position={[0, -0.3, 0]} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -28,4 +28,4 @@ export function Game(props) {
   );
 }
 
-useGLTF.preload("../../public/models/game.glb");
+useGLTF.preload("/models/game.glb");
