@@ -7,6 +7,17 @@
   }
   .item-1 {
     background-color: #5a7eaf !important;
+    .wrapper {
+      .wrapper-item-2 {
+        .background-image {
+          img {
+            &:nth-child(2) {
+              width: 160% !important;
+            }
+          }
+        }
+      }
+    }
   }
   .item-2 {
     background-color: #9b7b25 !important;

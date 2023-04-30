@@ -13,7 +13,7 @@ import typescript from "../../photos/tech/typescript.png";
 import threejs from "../../photos/tech/threejs.svg";
 import figma from "../../photos/tech/figma.png";
 // Projects
-import project1 from "../../photos/elite.png";
+import project1 from "../../photos/ell2.png";
 import project2 from "../../photos/delivery.png";
 import project3 from "../../photos/appco.png";
 import circle from "../../photos/circle.png";
