@@ -80,7 +80,7 @@ export const technologies = [
 export const projectsInfo = [
   {
     id: 1,
-    link: "https://startling-entremet-a3f819.netlify.app",
+    link: "https://fuzzy-fedora-elk.cyclic.app",
     gitLink: "https://github.com/jqsmiin/real-estate-project",
     title: "Elite Homes",
     subtitle: "Real Estate Project | MERN MUI",
