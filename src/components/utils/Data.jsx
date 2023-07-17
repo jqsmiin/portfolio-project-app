@@ -80,7 +80,7 @@ export const technologies = [
 export const projectsInfo = [
   {
     id: 1,
-    link: "https://fuzzy-fedora-elk.cyclic.app",
+    link: "https://real-estate-fyb1.onrender.com",
     gitLink: "https://github.com/jqsmiin/real-estate-project",
     title: "Elite Homes",
     subtitle: "Real Estate Project | MERN MUI",

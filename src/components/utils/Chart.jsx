@@ -37,6 +37,8 @@ function Chart() {
       });
 
       const res = await data.json();
+
+      console.log(res);
       const newData =
         res &&
         res.map((repo) => {

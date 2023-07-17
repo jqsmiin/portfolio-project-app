@@ -64,7 +64,6 @@ function Header() {
               <Suspense fallback={null}>
                 <Game />
               </Suspense>
-              <Environment preset="sunset" />
               <OrbitControls enableZoom={false} />
             </Canvas>
           </Col>

@@ -97,7 +97,7 @@ function Contact() {
       <Container data-aos="fade-up" data-aos-duration="1100">
         <PageTitle title={"Get In Touch"} />
         <Row>
-          <Col md={12}>
+          <Col md={12} className="contact-item">
             <div className="input-container">
               <form onSubmit={handleSubmit}>
                 <div className="input-group">
