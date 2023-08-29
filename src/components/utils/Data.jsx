@@ -16,6 +16,7 @@ import figma from "../../photos/tech/figma.png";
 import project1 from "../../photos/ell2.png";
 import project2 from "../../photos/delivery.png";
 import project3 from "../../photos/appco.png";
+import project4 from "../../photos/laptop2.png";
 import circle from "../../photos/circle.png";
 // Education
 import { VscSymbolStructure } from "react-icons/vsc";
@@ -102,6 +103,17 @@ export const projectsInfo = [
   },
   {
     id: 3,
+    link: "https://job-hunt-askprxhga-laxy24.vercel.app",
+    gitLink: "https://github.com/jqsmiin/job-hunt",
+    title: "Job Hunt",
+    subtitle: "Job Hunt Project | Next.js Typescript",
+    paragraph:
+      "Job hunt is a place where you can set up a job or apply for one. It is an application that gives the user opportunity to search for jobs, filter them by location, salary, type and experience. If you are registered as an company, you have the option to post a job, provide details and reach the employee.",
+    circle,
+    img: project4,
+  },
+  {
+    id: 4,
     link: "https://appco-landing.vercel.app",
     gitLink: "https://github.com/jqsmiin/appco-landing",
     title: "Appco Landing",
