@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import BallCanvas from "./assets/Ball";
@@ -5,6 +6,23 @@ import { technologies } from "./utils/Data";
 import Chart from "./utils/Chart";
 
 function About() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is a common breakpoint for mobile devices
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const disablePointerEventsStyle = {
+    pointerEvents: isMobile? 'none' : 'auto',
+  };
+
   return (
     <section id="about" className="mb-6">
       <Container>
@@ -13,7 +31,7 @@ function About() {
           <div className="page-bottom-line"></div>
         </div>
         <Row>
-          <Col md={12} lg={6} className="item-1">
+           <Col md={12} lg={6} className="item-1">
             <p>
               {" "}
               I'm a web developer with experience working with the MERN stack. I
@@ -41,17 +59,18 @@ function About() {
               </a>
             </div>
           </Col>
-          <Col md={12} lg={6} className="item-2">
-            <Chart />
+          <Col md={12} lg={6} className="item-2" style={disablePointerEventsStyle}>
+            {/* <Chart /> */}
           </Col>
           <Col
             md={12}
             className="item-3"
             data-aos="fade-up"
             data-aos-duration="1100"
+            style={disablePointerEventsStyle}
           >
             {technologies.map((technology) => (
-              <BallCanvas icon={technology.icon} key={technology.name} />
+              <BallCanvas icon={technology.icon} key={technology.name} className="icon" />
             ))}
           </Col>
         </Row>

@@ -79,3 +79,13 @@ a {
     background: #337393 !important;
   }
 }
+/* About.module.css */
+.disablePointerEvents {
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .disablePointerEvents {
+    pointer-events: auto;
+  }
+}

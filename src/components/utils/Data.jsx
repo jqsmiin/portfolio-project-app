@@ -14,8 +14,8 @@ import threejs from "../../photos/tech/threejs.svg";
 import figma from "../../photos/tech/figma.png";
 // Projects
 import project1 from "../../photos/ell2.png";
-import project2 from "../../photos/delivery.png";
-import project3 from "../../photos/appco.png";
+import project2 from "../../photos/teller.png";
+import project3 from "../../photos/growify.png";
 import project4 from "../../photos/laptop2.png";
 import circle from "../../photos/circle.png";
 // Education
@@ -80,29 +80,29 @@ export const technologies = [
 
 export const projectsInfo = [
   {
-    id: 1,
-    link: "https://real-estate-fyb1.onrender.com",
-    gitLink: "https://github.com/jqsmiin/real-estate-project",
-    title: "Elite Homes",
-    subtitle: "Real Estate Project | MERN MUI",
-    paragraph:
-      "Elite Homes lets you easily view, filter, and create properties. You can add basic details like the property name, description, location, price, number of bedrooms, and bathrooms, as well as multiple images. Once you've added a property, you can view it on the home page along with other properties. Filter by location, bedrooms, and bathrooms to find your perfect property. With a modern, user-friendly design, it's easy to use.",
-    circle,
-    img: project1,
-  },
-  {
     id: 2,
-    link: "https://rich-jade-crow-slip.cyclic.app",
-    gitLink: "https://github.com/jqsmiin/food-order-app",
-    title: "Delivery",
-    subtitle: "Food Order Project | MERN",
+    link: "https://www.youtube.com/watch?v=aMFEpCQLuOA&feature=youtu.be",
+    gitLink: "https://github.com/Teller-AI/teller-ai?tab=readme-ov-file",
+    title: "Teller AI",
+    subtitle: "Teller AI Project | Mongo DB, Express, Node js, Next js",
     paragraph:
-      "Delivery is an application that allows you to place or order food. You can register as a customer or as a restaurant. As a customer, you can view all available food categories and order them. As a restaurant, you can place your food, track orders and manage your menu.",
+      "Teller (or TellerAI) is an AI tool which provides you a unique, family-friendly, image and text-based story based on your input prompt. It comes along with our AI voice adaptation - just select your actor and enjoy him/her recite your story to you ⭐.",
     circle,
     img: project2,
   },
-  {
-    id: 3,
+  //  {
+  //   id: 4,
+  //   link: "https://appco-landing.vercel.app",
+  //   gitLink: "https://github.com/Growify-AI/growify-ai",
+  //   title: "Growify AI",
+  //   subtitle: "Growify AI Project | PostgreSQL, Express, Typescript, Next js",
+  //   paragraph:
+  //     "GrowifyAI revolutionizes learning experience by offering dynamic quiz generation from PDF or text inputs. You can seamlessly take and organize notes, categorize subjects, and access a convenient text-to-speech feature. This tool enables you to effortlessly enhance your learning process.",
+  //   circle,
+  //   img: project3,
+  // },
+   {
+    id: 1,
     link: "https://job-hunt-askprxhga-laxy24.vercel.app",
     gitLink: "https://github.com/jqsmiin/job-hunt",
     title: "Job Hunt",
@@ -112,17 +112,19 @@ export const projectsInfo = [
     circle,
     img: project4,
   },
+  
   {
-    id: 4,
-    link: "https://appco-landing.vercel.app",
-    gitLink: "https://github.com/jqsmiin/appco-landing",
-    title: "Appco Landing",
-    subtitle: "Landing Page Project | React Next.js",
+    id: 3,
+    link: "https://real-estate-fyb1.onrender.com",
+    gitLink: "https://github.com/jqsmiin/real-estate-project",
+    title: "Elite Homes",
+    subtitle: "Real Estate Project | Mongo DB, Express, Node js, Next js",
     paragraph:
-      "Appco landing provides a modern, sleek design that is sure to capture the attention of your visitors. It's not only visually stunning, but it is also built with performance in mind. Using Next.js, I was able to create a website that is not only fast and responsive, but also highly customizable and easy to maintain. If you are interested in seeing performance and accessibility of website, check github link.",
+      "Elite Homes lets you easily view, filter, and create properties. You can add basic details like the property name, description, location, price, number of bedrooms, and bathrooms, as well as multiple images. Once you've added a property, you can view it on the home page along with other properties. Filter by location, bedrooms, and bathrooms to find your perfect property. With a modern, user-friendly design, it's easy to use.",
     circle,
-    img: project3,
+    img: project1,
   },
+ 
 ];
 
 export const educationData = [

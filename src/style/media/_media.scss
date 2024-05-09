@@ -115,6 +115,11 @@
     .item-3 {
       grid-template-columns: repeat(4, 1fr);
     }
+    .item-3{
+      div{
+        pointer-events: none;
+      }
+    }
   }
   #projects {
     .item {
@@ -127,6 +132,11 @@
               width: 385px;
             }
           }
+        }
+      }
+      .heading{
+        .project-icons {
+          top: 4px;
         }
       }
     }
@@ -159,6 +169,11 @@
     .item-3 {
       grid-template-columns: repeat(3, 1fr);
     }
+    .item-3{
+      div{
+        pointer-events: none !important;
+      }
+    }
   }
 }
 @media (max-width: 420px) {
@@ -171,6 +186,11 @@
     .item-3 {
       grid-template-columns: repeat(2, 1fr);
     }
+        .item-3 {
+          div {
+            pointer-events: none !important;
+          }
+        }
   }
   #projects {
     .item {

@@ -18,6 +18,7 @@ function Projects() {
           {projectsInfo.map((project) => (
             <Col md={12} className={`item item-${project.id}`} key={project.id}>
               <div className="heading">
+                <div>
                 <h2>{project.title}</h2>
                 <div className="project-icons">
                   <a target="_blank" href={project.gitLink}>
@@ -26,6 +27,7 @@ function Projects() {
                   <a target="_blank" href={project.link}>
                     <BsBoxArrowUpRight />
                   </a>
+                </div>
                 </div>
                 <p>{project.subtitle}</p>
               </div>
